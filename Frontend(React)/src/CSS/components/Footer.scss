@@ -1,0 +1,23 @@
+@import "../helper/main";
+
+
+
+@include devices (mobile){
+    @include footer-mobile;
+}
+
+@include devices (tablet){
+    @include footer-tablet;
+}
+
+@include devices (laptop){
+    @include footer-laptop;
+}
+
+@include devices (desktop){
+    @include footer-desktop;
+};
+
+@include devices (extra-large){
+    @include footer-extralarge;
+}

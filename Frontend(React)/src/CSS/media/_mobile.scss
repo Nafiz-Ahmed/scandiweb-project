@@ -1,0 +1,252 @@
+@import "../helper/helper";
+
+@mixin products-mobile {
+    .product_page_header{
+        @include header(20px, 600, 70px);
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #add_btn {
+                @include button(white, black, 7px, 10px, 25px, 14px, 500);
+
+                &:hover{
+                    @include safe;
+                }
+            }
+            #delete-product-btn{
+                @include button(white, black, 7px, 10px, 25px, 14px, 500);
+
+                &:hover{
+                    @include danger;
+                }
+            }
+        }
+    }
+
+    .product_page_main{
+        @include main;
+        grid-template-columns: auto;
+
+
+        .no_product_alert{
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}
+
+@mixin product-mobile{
+    .product_container{
+        border: 2px solid black;
+        display: flex;
+        width: 230px;
+        height: 160px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        position: relative;
+
+        input[type="checkbox"]{
+            appearance: none;
+            -webkit-appearance: none;
+            background: white;
+            border: 2px solid black;
+            border-radius: 4px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            
+            &:hover{
+                background-color: rgb(240, 240, 240);
+                transition: all 300ms ease-in-out;
+            }
+            
+            &:checked{
+                background: #000;
+            }
+        }
+        
+        .details{
+            overflow: hidden;
+            text-align: center;
+            font-weight: 500;
+            .sku{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 90%;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// 
+// 
+// 
+// Add product page css starts
+// 
+// 
+// 
+
+
+@mixin addProduct-mobile{
+    .addProduct_page_header{
+        @include header(20px, 600, 70px);
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #cancle_btn{
+                @include button(white, black, 7px, 10px, 25px, 14px, 500);
+
+                &:hover{
+                    @include danger;
+                }
+            }
+            #save_btn{
+                @include button(white, black, 7px, 10px, 25px, 14px, 500);
+
+                &:hover{
+                    @include safe;
+                }
+            }
+        }
+    }
+}
+
+@mixin addProduct-Form-mobile{
+    #product_form{
+        @include main;
+        justify-content: start;
+
+        .form_input{
+            display: grid;
+            grid-template-columns: 50px auto;
+            align-items: center;
+            label{
+                @include label(12px);
+            }
+
+            input{
+                @include input(170px);
+            }
+        }
+    }
+}
+
+@mixin addProduct-ProductTypeAttr-mobile{
+    #productType__container{
+        display: grid;
+        grid-template-columns: 90px auto;
+        align-items: center;
+
+        label{
+            @include label(12px);
+        }
+        select{
+            background-color: white;
+            padding: 8px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 14px;
+            max-width: 170px;
+            outline: none;
+        }
+    }
+}
+
+@mixin addProduct-Attribute-mobile{
+    .attribute_container{
+        #DVD,
+        #Book,
+        #Furniture{
+            @include main;
+            justify-content: start;
+            min-height: auto;
+
+            div{
+                display: grid;
+                grid-template-columns: 70px auto;
+                align-items: center;
+
+            label{
+                @include label(12px);
+            }
+
+            input{
+                @include input(170px);
+            }
+
+        }
+        p{
+            font-size: 14px;
+            font-weight: 600;
+        }
+        }
+          
+    }
+}
+
+// 
+// 
+// 
+// Footer css starts
+// 
+// 
+// 
+
+@mixin footer-mobile{
+    .footer_text{
+        height: 70px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid black;
+        font-size: 14px;
+    }
+}
+
+// 
+// 
+// 
+// Global Message css starts
+// 
+// 
+// 
+
+@mixin globalMessage-mobile {
+
+    .global-message {
+        padding: 8px;
+        margin: 8px 0;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .global-message.success {
+        background-color: #32CD32;
+        opacity: 0.8;
+        color: #fff;
+    }
+
+    .global-message.danger {
+        background-color: #FFA500;
+        opacity: 0.8;
+        color: #fff;
+    }
+}

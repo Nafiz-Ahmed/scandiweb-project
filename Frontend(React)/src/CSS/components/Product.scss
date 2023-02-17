@@ -1,0 +1,22 @@
+@import "../helper/main";
+
+
+@include devices (mobile){
+    @include product-mobile;
+}
+
+@include devices (tablet){
+    @include product-tablet;
+}
+
+@include devices (laptop){
+    @include product-laptop;
+}
+
+@include devices (desktop){
+    @include product-desktop;
+};
+
+@include devices (extra-large){
+    @include product-extralarge;
+}

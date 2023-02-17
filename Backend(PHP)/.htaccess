@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+SetEnvIfNoCase Request_URI ^ / thumb.php no-gzip -vary
+RewriteRule ^(.+)$ index.php/$1 [L,QSA]
