@@ -3,7 +3,7 @@ require_once 'autoload.php';
 include 'config.php';
 
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, DELETE");
+header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: *");
 header("Content-type: application/json; charset=UTF-8");
 
